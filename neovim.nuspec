@@ -23,39 +23,54 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
     <!-- If the software is cross-platform, attempt to use the same id as the debian/rpm package(s) if possible. -->
     <id>neovim</id>
+		<title>Neovim</title>
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
     <version>0.2.0</version>
-		<packageSourceUrl>https://github.com/neovim/neovim</packageSourceUrl>
+		<packageSourceUrl>https://github.com/rmolin88/choco-neovim</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
-		<owners>Reinaldo Molina - rmolin88 at gmail dot com</owners>
+		<owners>Bart Joy, Reinaldo Molina</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>Nvim (Install)</title>
-		<authors>Bram Moolenaar et al.</authors>
+		<authors>Neovim contributors</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://neovim.io/</projectUrl>
-		<iconUrl>https://cdn.rawgit.com/neovim/neovim/9cc10c69/runtime/nvim.png</iconUrl>
-    <!-- <copyright>Year Software Vendor</copyright> -->
+		<iconUrl>https://neovim.io/images/logo@2x.png</iconUrl>
+		<copyright>Copyright Neovim contributors. All rights reserved.</copyright>
     <!-- If there is a license Url available, it is is required for the community feed -->
-    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
-    <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
+		<licenseUrl>https://raw.githubusercontent.com/neovim/neovim/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>-->
+		<projectSourceUrl>https://github.com/neovim/neovim</projectSourceUrl>
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
-    <tags>neovim admin vim editor</tags>
+		<tags>vi vim gvim neovim text editor sublime atom emacs notepad</tags>
 		<summary>Vim-fork focused on extensibility and usability.</summary>
-		<description># Please Consider donating https://salt.bountysource.com/teams/neovim
-			- If having problems please visit https://github.com/neovim/neovim/wiki/Installing-Neovim
+		<description>More powerful plugins
+The msgpack API enables structured communication to and from any programming language. Remote plugins run as co-processes that communicate with Neovim safely and asynchronously.
+
+Better out-of-the-box
+Strong defaults
+Modern terminal features such as truecolor and bracketed paste
+Built-in terminal emulator
+First-class embedding
+GUIs (or TUIs—such as readline) can nvim --embed or communicate via TCP socket using the discoverable msgpack API.
+
+Drop-in replacement for Vim
+Neovim is an extension of Vim: feature-parity and backwards compatibility are high priorities. If you are already familiar with Vim, see :help nvim-from-vim to learn about the differences.
+There is development version available as well. Interested? please see neovim-git.
 		</description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
+		<dependencies>
+			<dependency id="vcredist2013"/>
+			<dependency id="vcredist2015"/>
+		</dependencies>
     <!--<dependencies>
       <dependency id="" version="__MINIMUM_VERSION__" />
       <dependency id="" version="[__EXACT_VERSION__]" />
