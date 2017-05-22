@@ -42,7 +42,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<copyright>Copyright Neovim contributors. All rights reserved.</copyright>
     <!-- If there is a license Url available, it is is required for the community feed -->
 		<licenseUrl>https://raw.githubusercontent.com/neovim/neovim/master/LICENSE</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<projectSourceUrl>https://github.com/neovim/neovim</projectSourceUrl>
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
@@ -68,7 +68,6 @@ There is development version available as well. Interested? please see neovim-gi
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
 		<dependencies>
-			<dependency id="vcredist2013"/>
 			<dependency id="vcredist2015"/>
 		</dependencies>
     <!--<dependencies>
