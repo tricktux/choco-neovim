@@ -1,5 +1,4 @@
 ﻿$packageName = "neovim"
-$tools = Get-ToolsLocation 
-$destDir = Join-Path $tools $packageName
+$destDir = Join-Path $(Get-ToolsLocation) $packageName
 Remove-Item $destDir -Force -Recurse
 exit $?
