@@ -2,8 +2,8 @@
 
 $packageName= 'neovim' # arbitrary name for the package, used in messages
 $destDir = Join-Path $(Get-ToolsLocation) $packageName
-$url        = 'https://ci.appveyor.com/api/projects/neovim/neovim/artifacts/build/Neovim.zip?branch=master&job=Configuration%3A%20MINGW_32' # download url, HTTPS preferred
-$url64      = 'https://ci.appveyor.com/api/projects/neovim/neovim/artifacts/build/Neovim.zip?branch=master&job=Configuration%3A%20MINGW_64' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
+$url        = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-win32.zip' # download url, HTTPS preferred
+$url64      = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-win64.zip' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
 
 # Write-Output $destDir
 
