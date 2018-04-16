@@ -27,10 +27,10 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>0.2.2.2018.04.08</version>
+    <version>0.2.2.20180416</version>
 		<packageSourceUrl>https://github.com/rmolin88/choco-neovim</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
-		<!-- <owners>Bart Joy, Reinaldo Molina</owners> -->
+		<owners>Bart Joy, Reinaldo Molina</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -50,18 +50,18 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<tags>vi vim gvim neovim text editor sublime atom emacs notepad</tags>
 		<summary>Vim-fork focused on extensibility and usability.</summary>
 		<description>
-			# More powerful plugins
-			The msgpack API enables structured communication to and from any programming language. Remote plugins run as co-processes that communicate with Neovim safely and asynchronously.
+# More powerful plugins
+The msgpack API enables structured communication to and from any programming language. Remote plugins run as co-processes that communicate with Neovim safely and asynchronously.
 
-			# Better out-of-the-box
-			Strong defaults
-			Modern terminal features such as truecolor and bracketed paste
-			Built-in terminal emulator
-			First-class embedding
-			GUIs (or TUIs—such as readline) can nvim --embed or communicate via TCP socket using the discoverable msgpack API.
+# Better out-of-the-box
+Strong defaults
+Modern terminal features such as truecolor and bracketed paste
+Built-in terminal emulator
+First-class embedding
+GUIs (or TUIs—such as readline) can nvim --embed or communicate via TCP socket using the discoverable msgpack API.
 
-			# Drop-in replacement for Vim
-			Neovim is an extension of Vim: feature-parity and backwards compatibility are high priorities. If you are already familiar with Vim, see :help nvim-from-vim to learn about the differences.
+# Drop-in replacement for Vim
+Neovim is an extension of Vim: feature-parity and backwards compatibility are high priorities. If you are already familiar with Vim, see :help nvim-from-vim to learn about the differences.
 		</description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!-- =============================== -->      
