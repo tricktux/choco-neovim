@@ -22,18 +22,6 @@ $packageArgs = @{
 
 $nvim = $destDir + '\Neovim\bin\nvim-qt.exe'
 Install-BinFile -Name 'nvim-qt' -Path $nvim -UseStart true
-$tee = $destDir + "\Neovim\bin\tee.exe"
-Install-BinFile -Name 'tee' -Path $tee
-$tidy = $destDir + "\Neovim\bin\tidy.exe"
-Install-BinFile -Name 'tidy' -Path $tidy
-$winYank = $destDir + "\Neovim\bin\win32yank.exe"
-Install-BinFile -Name 'win32yank' -Path $winYank
-$agent = $destDir + "\Neovim\bin\winpty-agent.exe"
-Install-BinFile -Name 'winpty-agent' -Path $agent
-$cat = $destDir + "\Neovim\bin\cat.exe"
-Install-BinFile -Name 'cat' -Path $cat
-$diff = $destDir + "\Neovim\bin\diff.exe"
-Install-BinFile -Name 'diff' -Path $diff
 $exe = $destDir + "\Neovim\bin\nvim.exe"
 Install-BinFile -Name 'nvim' -Path $exe
 
