@@ -1,9 +1,17 @@
-﻿$ErrorActionPreference = 'Stop'; # stop on all errors
+﻿# File:           chocolateyinstall.ps1
+# Description:    Installation of neovim
+# Author:		    Reinaldo Molina
+# Email:          rmolin88 at gmail dot com
+# Revision:	    0.0.0
+# Last Modified:  Fri Apr 20 2018 22:47
 
-$packageName= 'neovim' # arbitrary name for the package, used in messages
-$destDir = Join-Path $(Get-ToolsLocation) $packageName
-$url        = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-win32.zip' # download url, HTTPS preferred
-$url64      = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-win64.zip' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
+$ErrorActionPreference = 'Stop'; # stop on all errors
+
+$packageName = 'neovim' # arbitrary name for the package, used in messages
+$destDir     = Join-Path $(Get-ToolsLocation) $packageName
+$url         = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-win32.zip' # download url, HTTPS preferred
+$url64       = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-win64.zip' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
+$bin         = $destDir + '\Neovim\bin'
 
 
 # Write-Output $destDir
@@ -23,24 +31,11 @@ $packageArgs = @{
 	validExitCodes= @(0) #please insert other valid exit codes here
 }
 
-Install-ChocolateyZipPackage @packageArgs # https://chocolatey.org/docs/helpers-install-chocolatey-package
+# https://chocolatey.org/docs/helpers-install-chocolatey-package
+Install-ChocolateyZipPackage @packageArgs
 
-$nvim = $destDir + '\Neovim\bin\nvim-qt.exe'
-Install-BinFile -Name 'nvim-qt' -Path $nvim -UseStart true
-$tee = $destDir + "\Neovim\bin\tee.exe"
-Install-BinFile -Name 'tee' -Path $tee
-$tidy = $destDir + "\Neovim\bin\tidy.exe"
-Install-BinFile -Name 'tidy' -Path $tidy
-$winYank = $destDir + "\Neovim\bin\win32yank.exe"
-Install-BinFile -Name 'win32yank' -Path $winYank
-$agent = $destDir + "\Neovim\bin\winpty-agent.exe"
-Install-BinFile -Name 'winpty-agent' -Path $agent
-$cat = $destDir + "\Neovim\bin\cat.exe"
-Install-BinFile -Name 'cat' -Path $cat
-$diff = $destDir + "\Neovim\bin\diff.exe"
-Install-BinFile -Name 'diff' -Path $diff
-$exe = $destDir + "\Neovim\bin\nvim.exe"
-Install-BinFile -Name 'nvim' -Path $exe
+# Adds neovim to the path if not present already
+Install-ChocolateyPath -PathToInstall $bin
 
 Write-Output "Please Consider donating https://salt.bountysource.com/teams/neovim"
 Write-Output "Issues? Please visit https://github.com/neovim/neovim/wiki/Installing-Neovim"
