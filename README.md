@@ -1,6 +1,13 @@
 # choco-neovim
 Chocolatey package for the distribution of released versions of [neovim](https://neovim.io/)
 
+## Version upgrade checklist
+- [ ] nuspec: update on the `version` tag.
+- [ ] chocolateyinstall.ps1: update `$url` and `$url64`
+- [ ] chocolateyinstall.ps1: update the `checksum` and `checksum64`
+	- `"c:\ProgramData\chocolatey\tools\checksum.exe" nvim-win32.zip -t=sha256`
+	- The checksum `-t` depends on what you have specified in your `checksumType`
+
 ## Installation Instructions
 - Install [chocolatey](https://chocolatey.org/install)
 - From command line `choco install neovim`
