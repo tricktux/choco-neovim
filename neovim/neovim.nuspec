@@ -27,7 +27,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>0.3.1</version>
+    <version>0.3.2</version>
 		<packageSourceUrl>https://github.com/rmolin88/choco-neovim</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
 		<owners>Reinaldo Molina</owners>
@@ -71,7 +71,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 - Which will get you the latest _nightly_ builds for windows.
 		</description>
 		<releaseNotes>
-Release notes [here](https://github.com/neovim/neovim/commit/cd94dd6bb29f3140cb25b30e98fba9123bfd408f).
+Release notes [here](https://github.com/neovim/neovim/releases/tag/v0.3.2).
 		</releaseNotes>
     <!-- =============================== -->      
 
