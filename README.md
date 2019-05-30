@@ -2,7 +2,8 @@
 Chocolatey package for the distribution of released versions of [neovim](https://neovim.io/)
 
 ## Version upgrade checklist
-- [ ] nuspec: update on the `version` tag.
+- [ ] nuspec: update `version` tag.
+- [ ] nuspec: update `release notes` tag.
 - [ ] chocolateyinstall.ps1: update `$url` and `$url64`
 - [ ] chocolateyinstall.ps1: update the `checksum` and `checksum64`
 	- `"c:\ProgramData\chocolatey\tools\checksum.exe" nvim-win32.zip -t=sha256`
