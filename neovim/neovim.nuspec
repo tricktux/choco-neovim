@@ -77,7 +77,7 @@ Release notes [here](https://github.com/neovim/neovim/releases/tag/v0.3.6).
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
 		<dependencies>
-			<dependency id="vcredist2015"/>
+			<dependency id="vcredist2015" version="14.0.24215.20170201"/>
 		</dependencies>
     <!--<dependencies>
       <dependency id="" version="__MINIMUM_VERSION__" />
