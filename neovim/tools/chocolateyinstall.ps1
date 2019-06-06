@@ -12,6 +12,10 @@ $url        = 'https://github.com/neovim/neovim/releases/download/v0.3.6/nvim-wi
 $url64      = 'https://github.com/neovim/neovim/releases/download/v0.3.6/nvim-win64.zip' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
 $bin         = $destDir + '\Neovim\bin'
 
+# Get user provided paramaters
+# Help here: https://github.com/chocolatey/choco/wiki/HelpersGetPackageParameters
+$pp = Get-PackageParameters
+
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $destDir
@@ -32,7 +36,10 @@ $packageArgs = @{
 Install-ChocolateyZipPackage @packageArgs
 
 # Adds neovim to the path if not present already
-Install-ChocolateyPath -PathToInstall $bin
+# Define option here and check at the same time
+if (!$pp['NoNeovimOnPath']) {
+	Install-ChocolateyPath -PathToInstall $bin
+}
 
 Write-Output "Please Consider donating https://salt.bountysource.com/teams/neovim"
 Write-Output "Issues? Please visit https://github.com/neovim/neovim/wiki/Installing-Neovim"
