@@ -69,6 +69,9 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 - If you want to stay up to date with the latest development you can install neovim using the `--pre` option.
 - For example: `choco install neovim --pre`. 
 - Which will get you the latest _nightly_ builds for windows.
+
+**Note:** To force the installation of x32 version, use the --x86 argument with `choco install`.
+
 		</description>
 		<releaseNotes>
 Release notes [here](https://github.com/neovim/neovim/releases/tag/v0.3.6).
