@@ -8,8 +8,8 @@
 $ErrorActionPreference = 'Stop'; # stop on all errors
 $packageName= 'neovim' # arbitrary name for the package, used in messages
 $destDir = Join-Path $(Get-ToolsLocation) $packageName
-$url        = 'https://github.com/neovim/neovim/releases/download/v0.3.6/nvim-win32.zip' # download url, HTTPS preferred
-$url64      = 'https://github.com/neovim/neovim/releases/download/v0.3.6/nvim-win64.zip' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
+$url        = 'https://github.com/neovim/neovim/releases/download/v0.3.7/nvim-win32.zip' # download url, HTTPS preferred
+$url64      = 'https://github.com/neovim/neovim/releases/download/v0.3.7/nvim-win64.zip' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
 $bin         = $destDir + '\Neovim\bin'
 
 # Get user provided paramaters
@@ -24,9 +24,9 @@ $packageArgs = @{
 
   softwareName  = 'neovim*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
 
-  checksum      = 'A0E33ABC79BB30B92AA273FD9C66DB54676A9F0136C034861D2A51DE58A2F08A'
+  checksum      = 'C4CFE890C4C92A4A56716933775F20D819CFCD94E1575000B9A98BE3713FFF91'
   checksumType  = 'sha256' #default is md5, can also be sha1, sha256 or sha512
-  checksum64    = '8AE18BF555433535B6406935F3A8979026034B4981619FF6ABCEFF4358940F66'
+  checksum64    = 'E049E28CB9D4C0C89DE33F3A1266197E6B8C3BCB28677617F7117661DE702235'
   checksumType64= 'sha256' #default is checksumType
 
   validExitCodes= @(0) #please insert other valid exit codes here
@@ -39,6 +39,10 @@ Install-ChocolateyZipPackage @packageArgs
 # Define option here and check at the same time
 if (!$pp['NoNeovimOnPath']) {
 	Install-ChocolateyPath -PathToInstall $bin
+        Write-Output "Added Neovim binary folder to the user's PATH variable"
+
+} else {
+        Write-Output "Please note that Neovim binary folder will NOT be added to the path"
 }
 
 Write-Output "Please Consider donating https://salt.bountysource.com/teams/neovim"
