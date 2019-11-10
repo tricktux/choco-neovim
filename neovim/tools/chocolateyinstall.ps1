@@ -8,8 +8,8 @@
 $ErrorActionPreference = 'Stop'; # stop on all errors
 $packageName= 'neovim' # arbitrary name for the package, used in messages
 $destDir = Join-Path $(Get-ToolsLocation) $packageName
-$url        = 'https://github.com/neovim/neovim/releases/download/v0.4.2/nvim-win32.zip' # download url, HTTPS preferred
-$url64      = 'https://github.com/neovim/neovim/releases/download/v0.4.2/nvim-win64.zip' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
+$url        = 'https://github.com/neovim/neovim/releases/download/v0.4.3/nvim-win32.zip' # download url, HTTPS preferred
+$url64      = 'https://github.com/neovim/neovim/releases/download/v0.4.3/nvim-win64.zip' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
 $bin         = $destDir + '\Neovim\bin'
 
 # Get user provided paramaters
