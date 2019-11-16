@@ -24,9 +24,9 @@ $packageArgs = @{
 
   softwareName  = 'neovim*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
 
-	checksum      = 'ad356fa9ee20fe4f8cfa52d70c814da43607c1050c1b7f19cdf1689aec42f061'
+	checksum      = '4f63f55697afaf4d9f82204768fd7ad3e98cc554f2745afd4a160d50a63d1025'
   checksumType  = 'sha256' #default is md5, can also be sha1, sha256 or sha512
-	checksum64    = 'de39dd86c25a990f9b2468a775ca48608fadc71d5e9f35a04882480fd15a07ae'
+	checksum64    = '549fd985e3e6207dc3d52d17fb2bc7957adc264f20b525fc7e62f8dc8c597931'
   checksumType64= 'sha256' #default is checksumType
 
   validExitCodes= @(0) #please insert other valid exit codes here
