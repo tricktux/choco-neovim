@@ -27,7 +27,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-		<version>0.3.8.88-beta</version>
+		<version>0.5.0-beta</version>
 		<packageSourceUrl>https://github.com/rmolin88/choco-neovim</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
 		<owners>Reinaldo Molina</owners>
@@ -77,17 +77,17 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 - Default behavior is that Neovim binary will be added to the path.
 - Example: `choco install neovim --params "/NoNeovimOnPath"`
 
-**Note:** To force the installation of x32 version, use the --x86 argument with `choco install`.
+**Note:** To force the installation of x32 version, use the `--x86` argument with `choco install`.
 
 		</description>
 		<releaseNotes>
-Release notes [here](https://github.com/neovim/neovim/releases/tag/v0.3.8).
+Release notes [here](https://github.com/neovim/neovim/releases/tag/v0.4.3).
 		</releaseNotes>
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
 		<dependencies>
-			<dependency id="vcredist2015"/>
+			<dependency id="vcredist2015" version="14.0.24215.20170201"/>
 		</dependencies>
     <!--<dependencies>
       <dependency id="" version="__MINIMUM_VERSION__" />

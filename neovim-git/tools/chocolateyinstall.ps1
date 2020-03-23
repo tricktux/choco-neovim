@@ -13,6 +13,9 @@ $url         = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-
 $url64       = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-win64.zip' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
 $bin         = $destDir + '\Neovim\bin'
 
+# Get user provided paramaters
+# Help here: https://github.com/chocolatey/choco/wiki/HelpersGetPackageParameters
+$pp = Get-PackageParameters
 
 # Write-Output $destDir
 $packageArgs = @{
