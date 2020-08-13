@@ -8,8 +8,8 @@
 $ErrorActionPreference = 'Stop'; # stop on all errors
 $packageName= 'neovim' # arbitrary name for the package, used in messages
 $destDir = Join-Path $(Get-ToolsLocation) $packageName
-$url        = 'https://github.com/neovim/neovim/releases/download/v0.4.3/nvim-win32.zip' # download url, HTTPS preferred
-$url64      = 'https://github.com/neovim/neovim/releases/download/v0.4.3/nvim-win64.zip' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
+$url        = 'https://github.com/neovim/neovim/releases/download/v0.4.4/nvim-win32.zip' # download url, HTTPS preferred
+$url64      = 'https://github.com/neovim/neovim/releases/download/v0.4.4/nvim-win64.zip' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
 $bin         = $destDir + '\Neovim\bin'
 
 # Get user provided paramaters
@@ -24,9 +24,9 @@ $packageArgs = @{
 
   softwareName  = 'neovim*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
 
-	checksum      = '4f63f55697afaf4d9f82204768fd7ad3e98cc554f2745afd4a160d50a63d1025'
+	checksum      = '2b8011cbe4a4028d8fddfecf555b5a66d05ad34d36e242ff26b418ddf33b323f'
   checksumType  = 'sha256' #default is md5, can also be sha1, sha256 or sha512
-	checksum64    = '549fd985e3e6207dc3d52d17fb2bc7957adc264f20b525fc7e62f8dc8c597931'
+	checksum64    = '4b88daae8427624f82abb10eb6e527f4b0c600e83aaa9a0857d06106b445bbd3'
   checksumType64= 'sha256' #default is checksumType
 
   validExitCodes= @(0) #please insert other valid exit codes here
