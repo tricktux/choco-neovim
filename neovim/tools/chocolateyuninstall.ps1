@@ -9,4 +9,4 @@ $packageName= 'neovim' # arbitrary name for the package, used in messages
 $destDir = Join-Path $(Get-ToolsLocation) $packageName
 $bin         = $destDir + '\Neovim\bin'
 
-Write-Output "Please manually remove `"$($bin)`" from the User PATH environment variable if not installing neovim again."
+Write-Output "Please manually remove `"$($bin)`" from the PATH environment variable if not installing neovim again."
