@@ -42,7 +42,7 @@ Install-ChocolateyZipPackage @packageArgs
 if ($pp['AddToAllUserPath']) {
 	Install-ChocolateyPath -PathToInstall $bin -PathType Machine
         Write-Output "Added Neovim binary folder to the machines's PATH variable"
-} else if (!$pp['NoNeovimOnPath']) {
+} elseif (!$pp['NoNeovimOnPath']) {
 	Install-ChocolateyPath -PathToInstall $bin
         Write-Output "Added Neovim binary folder to the user's PATH variable"
 } else {
