@@ -74,12 +74,12 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 - `/NoNeovimOnPath`: Neovim binary folder will not be added to the path.
 	- Optional parameter.
 	- Default behavior is that Neovim binary will be added to the users path.
+	- If this is used together with `/NeovimOnPathForAll`, this takes precedence and the path will not be modified.
 	- Example: `choco install neovim --params "/NoNeovimOnPath"`
-- `/AddToAllUserPath`: Neovim binary folder will be added to the machine path.
+- `/NeovimOnPathForAll`: Neovim binary folder will be added to the machine path.
 	- Optional parameter.
 	- Default behavior is that Neovim binary will be added only to the users path.
-	- If this is used together with `/NoNeovimOnPath`, this takes precedence and the path will be modified.
-	- Example: `choco install neovim --params "/AddToAllUserPath"`
+	- Example: `choco install neovim --params "/NeovimOnPathForAll"`
 
 **Note:** To force the installation of x32 version, use the --x86 argument with `choco install`.
 
