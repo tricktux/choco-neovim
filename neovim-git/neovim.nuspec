@@ -27,7 +27,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-		<version>0.4.5-beta</version>
+		<version>0.4.5.20210116-beta</version>
 		<packageSourceUrl>https://github.com/rmolin88/choco-neovim</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
 		<owners>Reinaldo Molina</owners>
@@ -65,17 +65,22 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 - Neovim is an extension of Vim: feature-parity and backwards compatibility are high priorities.
 - If you are already familiar with Vim, see :help nvim-from-vim to learn about the differences.
 
-
 ### Following HEAD
 - If you want to stay up to date with the latest development you can install neovim using the `--pre` option.
 - For example: `choco install neovim --pre`. 
 - Which will get you the latest _nightly_ builds for windows.
 
-### Package Parametes
+### Package Parameters
 - `/NoNeovimOnPath`: Neovim binary folder will not be added to the path.
 - Optional parameter.
 - Default behavior is that Neovim binary will be added to the path.
+- If this is used together with `/NeovimOnPathForAll`, this takes precedence and the path will not be modified.
 - Example: `choco install neovim --params "/NoNeovimOnPath"`
+
+- `/NeovimOnPathForAll`: Neovim binary folder will be added to the machine path.
+- Optional parameter.
+- Default behavior is that Neovim binary will be added only to the users path.
+- Example: `choco install neovim --params "/NeovimOnPathForAll"`
 
 **Note:** To force the installation of x32 version, use the `--x86` argument with `choco install`.
 
