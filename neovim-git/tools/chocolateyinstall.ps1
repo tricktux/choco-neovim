@@ -48,5 +48,5 @@ if ($pp['NoNeovimOnPath']) {
     Write-Output "Added Neovim binary folder to the user's PATH variable"
 }
 
-Write-Output "Please Consider donating https://salt.bountysource.com/teams/neovim"
+Write-Output "Please Consider donating https://github.com/sponsors/neovim"
 Write-Output "Issues? Please visit https://github.com/neovim/neovim/wiki/Installing-Neovim"
