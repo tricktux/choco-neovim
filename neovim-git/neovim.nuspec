@@ -27,7 +27,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-		<version>0.6.0-beta</version>
+		<version>0.6.0.20211125-beta</version>
 		<packageSourceUrl>https://github.com/tricktux/choco-neovim</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
 		<owners>Reinaldo Molina</owners>
@@ -82,7 +82,9 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 - Default behavior is that Neovim binary will be added only to the users path.
 - Example: `choco install neovim --params "/NeovimOnPathForAll"`
 
-**Note:** To force the installation of x32 version, use the `--x86` argument with `choco install`.
+**Note:** ~~To force the installation of x32 version, use the `--x86` argument with `choco install`.~~
+
+As of [#16317](https://github.com/neovim/neovim/pull/16317) Win32 builds and releases were removed
 
 		</description>
 		<releaseNotes>
