@@ -41,11 +41,12 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<iconUrl>https://neovim.io/images/logo@2x.png</iconUrl>
 		<copyright>Copyright Neovim contributors. All rights reserved.</copyright>
     <!-- If there is a license Url available, it is is required for the community feed -->
-		<licenseUrl>https://raw.githubusercontent.com/neovim/neovim/master/LICENSE</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/neovim/neovim/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<projectSourceUrl>https://github.com/neovim/neovim</projectSourceUrl>
-		<docsUrl>https://neovim.io/doc/</docsUrl>
-		<mailingListUrl>https://neovim.io/community/</mailingListUrl>
+		<docsUrl>https://neovim.io/doc/general/</docsUrl>
+    <wikiUrl>https://github.com/neovim/neovim/wiki/</wikiUrl>
+		<mailingListUrl>https://neovim.discourse.group/</mailingListUrl>
 		<bugTrackerUrl>https://github.com/neovim/neovim/issues</bugTrackerUrl>
 		<tags>vi vim gvim neovim text editor sublime atom emacs notepad</tags>
 		<summary>Vim-fork focused on extensibility and usability.</summary>
