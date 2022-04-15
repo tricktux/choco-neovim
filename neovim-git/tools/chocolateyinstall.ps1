@@ -30,14 +30,16 @@ Install-ChocolateyZipPackage @packageArgs
 # Adds neovim to the path if not present already
 # Define option here and check at the same time
 if ($pp['NoNeovimOnPath']) {
-    Write-Output "Please note that Neovim binary folder will NOT be added to the path"
+  Write-Output "Please note that Neovim binary ('$bin') folder will NOT be added to the path"
 } elseif ($pp['NeovimOnPathForAll']) {
     Install-ChocolateyPath -PathToInstall $bin -PathType Machine
-    Write-Output "Added Neovim binary folder to the machines's PATH variable"
+    Write-Output "==> Added Neovim binary folder ('$bin') to the machines's PATH variable"
+    Write-Output "==> - Please refresh/restart terminal for changes to have effect"
 } else {
     Install-ChocolateyPath -PathToInstall $bin
-    Write-Output "Added Neovim binary folder to the user's PATH variable"
+    Write-Output "==> Added Neovim binary folder ('$bin') to the user's PATH variable"
+    Write-Output "==> - Please refresh/restart terminal for changes to have effect"
 }
 
-Write-Output "Please Consider donating https://github.com/sponsors/neovim"
-Write-Output "Issues? Please visit https://github.com/neovim/neovim/wiki/Installing-Neovim"
+Write-Output "==> Please Consider donating https://github.com/sponsors/neovim"
+Write-Output "==> Issues? Please visit https://github.com/neovim/neovim/wiki/Installing-Neovim"
