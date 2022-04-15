@@ -1,16 +1,14 @@
 ﻿# File:           chocolateyinstall.ps1
 # Description:    Installation of Neovim
 # Author:         Reinaldo Molina
-# Email:          rmolin88 at gmail dot com
-# Revision:       0.0.0
-# Last Modified:  Fri Apr 20 2018 23:04
+# Email:          me at molina mail dot com
 
 $ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName = 'neovim' # arbitrary name for the package, used in messages
 $destDir     = Join-Path $(Get-ToolsLocation) $packageName
 $url64       = 'https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-win64.zip' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
-$bin         = $destDir + '\Neovim\bin'
+$bin         = $destDir + '\nvim-win64\bin'
 
 # Get user provided paramaters
 # Help here: https://github.com/chocolatey/choco/wiki/HelpersGetPackageParameters

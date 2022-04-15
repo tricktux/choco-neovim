@@ -8,7 +8,7 @@ $ErrorActionPreference = 'Stop'; # stop on all errors
 $packageName = 'neovim' # arbitrary name for the package, used in messages
 $destDir     = Join-Path $(Get-ToolsLocation) $packageName
 $url64       = 'https://github.com/neovim/neovim/releases/download/nightly/nvim-win64.zip' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
-$bin         = $destDir + '\Neovim\bin'
+$bin         = $destDir + '\nvim-win64\bin'
 
 # Get user provided paramaters
 # Help here: https://github.com/chocolatey/choco/wiki/HelpersGetPackageParameters
