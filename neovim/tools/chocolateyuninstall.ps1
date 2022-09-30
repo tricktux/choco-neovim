@@ -1,10 +1,6 @@
 # File:           chocolateyuninstall.ps1
 # Description:    Uninstallation of neovim
-# Author:		    Reinaldo Molina
-# Email:          rmolin88 at gmail dot com
-# Revision:	    0.0.0
-# Last Modified:  Fri Apr 20 2018 22:50
-#
+
 $packageName= 'neovim' # arbitrary name for the package, used in messages
 $destDir = Join-Path $(Get-ToolsLocation) $packageName
 $bin         = $destDir + '\nvim-win64\bin'

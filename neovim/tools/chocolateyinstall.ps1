@@ -1,7 +1,5 @@
 ﻿# File:           chocolateyinstall.ps1
 # Description:    Installation of Neovim
-# Author:         Reinaldo Molina
-# Email:          me at molina mail dot com
 
 $ErrorActionPreference = 'Stop'; # stop on all errors
 
