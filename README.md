@@ -29,8 +29,8 @@ Chocolatey package for the distribution of released versions of [neovim](https:/
 
 ### Testing regular version
 
-- `choco install neovim -s '%cd%' -fy`
-- `choco uninstall neovim -s '%cd%' -fy`
+- `choco install neovim --source . -fy`
+- `choco uninstall neovim --source . -fy`
 
 ### Pushing changes
 
