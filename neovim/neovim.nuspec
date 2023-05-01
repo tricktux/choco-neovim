@@ -3,7 +3,7 @@
   <metadata>
     <id>neovim</id>
 		<title>Neovim</title>
-    <version>0.8.3</version>
+    <version>0.9.0</version>
 		<packageSourceUrl>https://github.com/tricktux/choco-neovim</packageSourceUrl>
 		<owners>Reinaldo Molina</owners>
 		<authors>Neovim contributors</authors>
@@ -57,7 +57,7 @@ As of [#16317](https://github.com/neovim/neovim/pull/16317) Win32 builds and rel
 
 		</description>
 		<releaseNotes>
-Release notes [here](https://github.com/neovim/neovim/releases/tag/v0.8.3).
+Release notes [here](https://github.com/neovim/neovim/releases/tag/v0.9.0).
 		</releaseNotes>
 		<dependencies>
 			<dependency id="vcredist2015" version="14.0.24215.20170201"/>
