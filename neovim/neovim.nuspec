@@ -8,7 +8,7 @@
 		<owners>Reinaldo Molina</owners>
 		<authors>Neovim contributors</authors>
     <projectUrl>https://neovim.io/</projectUrl>
-		<iconUrl>https://neovim.io/images/logo@2x.png</iconUrl>
+		<iconUrl>https://cdn.statically.io/gh/neovim/neovim/68e2d722/cmake.packaging/neovim.png</iconUrl>
 		<copyright>Copyright Neovim contributors. All rights reserved.</copyright>
     <licenseUrl>https://raw.githubusercontent.com/neovim/neovim/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
