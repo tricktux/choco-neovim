@@ -17,28 +17,43 @@ Chocolatey package for the distribution of released versions of [neovim](https:/
 - From command line `choco install neovim`
 - Or `choco install neovim --pre`
 
-## Dev Instructions
+# Dev Instructions
 
+## Docker
+
+- Instructions to setup the container, where `choco-neovim` is this repo.
+
+```sh
+sudo docker pull chocolatey/choco   
+sudo docker run -ti --rm -v $PWD/choco-neovim:/data chocolatey/choco:latest /bin/bash
+```
 - Always pack after making any changes
-- `choco pack`
 
-### Testing beta version
+```cmd
+choco pack
+```
 
-- `choco install neovim --pre -s '%cd%' -fy`
-- `choco uninstall neovim --pre -s '%cd%' -fy`
+## Testing beta version
 
-### Testing regular version
+```cmd
+choco install neovim --pre -s '%cd%' -fy
+choco uninstall neovim --pre -s '%cd%' -fy
+```
 
-- `choco install neovim --source . -fy`
-- `choco uninstall neovim --source . -fy`
+## Testing regular version
 
-### Pushing changes
+```cmd
+choco install neovim --source . -fy
+choco uninstall neovim --source . -fy
+```
 
-- `choco apikey --key <key> --source https://push.chocolatey.org` 
-- `choco push <package> --source https://push.chocolatey.org` 
+## Pushing changes
 
-#### From Linux
+```cmd
+choco apikey --key <key> --source https://push.chocolatey.org
+choco push <package> --source https://push.chocolatey.org
 
-- Substitute `choco` with:
-  - `sudo docker run --rm -v $PWD:$PWD -w $PWD linuturk/mono-choco`
-  - `choco push <package> --api-key <key> --source https://push.chocolatey.org` 
+# Or in one command
+
+choco push <package> --api-key <key> --source https://push.chocolatey.org
+```
