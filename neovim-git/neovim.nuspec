@@ -3,7 +3,7 @@
   <metadata>
     <id>neovim</id>
         <title>Neovim</title>
-        <version>0.10.0-beta.20230531</version>
+        <version>0.11.1-beta</version>
         <packageSourceUrl>https://github.com/tricktux/choco-neovim</packageSourceUrl>
         <owners>Reinaldo Molina</owners>
         <authors>Neovim contributors</authors>
