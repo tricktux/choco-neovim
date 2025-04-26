@@ -20,20 +20,29 @@
         <tags>vi vim gvim neovim text editor sublime atom emacs notepad</tags>
         <summary>Vim-fork focused on extensibility and usability.</summary>
         <description>
-### More powerful plugins
-- The msgpack API enables structured communication to and from any programming language.
-- Remote plugins run as co-processes that communicate with Neovim safely and asynchronously.
+## Features
+### Extensible
 
-### Better out-of-the-box
-- Strong defaults
-- Modern terminal features such as truecolor and bracketed paste
-- Built-in terminal emulator
-- First-class embedding
-- GUIs (or TUIs—such as readline) can nvim --embed or communicate via TCP socket using the discoverable msgpack API.
+API is first-class: discoverable, versioned, documented.
+MessagePack structured communication enables extensions in any language.
+Remote plugins run as co-processes, safely and asynchronously.
+GUIs, IDEs, web browsers can --embed Neovim as an editor or script host.
+Lua plugins are easy to create just like Vimscript plugins. Your config can live in init.lua!
+AST-producing parsing engine enables faster, more accurate syntax highlighting, code navigation, refactoring, text objects, and motions.
 
-### Drop-in replacement for Vim
-- Neovim is an extension of Vim: feature-parity and backwards compatibility are high priorities.
-- If you are already familiar with Vim, see :help nvim-from-vim to learn about the differences.
+### Usable
+
+Strong defaults including a unique, minimalist colorscheme.
+Builtin LSP client for semantic code inspection and refactoring (go-to definition, "find references", format, …).
+Client-server architecture allows you to detach the UI and keep the editor session running (like tmux). Attach multiple UIs to any Nvim session.
+Works the same everywhere: one build-type, one command.
+Modern terminal features such as cursor styling, focus events, bracketed paste.
+Builtin :terminal set the standard for "TTY as a basic component".
+
+### Drop-in Vim
+
+Fully compatible with Vim's editing model and Vimscript v1.
+Start with :help nvim-from-vim if you already use Vim. If not, try :Tutor.
 
 ### Following HEAD
 - If you want to stay up to date with the latest development you can install neovim using the `--pre` option.
