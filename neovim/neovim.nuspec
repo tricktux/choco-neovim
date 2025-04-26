@@ -21,35 +21,38 @@
         <summary>Vim-fork focused on extensibility and usability.</summary>
         <description>
 ## Features
+
 ### Extensible
 
-API is first-class: discoverable, versioned, documented.
-MessagePack structured communication enables extensions in any language.
-Remote plugins run as co-processes, safely and asynchronously.
-GUIs, IDEs, web browsers can --embed Neovim as an editor or script host.
-Lua plugins are easy to create just like Vimscript plugins. Your config can live in init.lua!
-AST-producing parsing engine enables faster, more accurate syntax highlighting, code navigation, refactoring, text objects, and motions.
+- API is first-class: discoverable, versioned, documented.
+- MessagePack structured communication enables extensions in any language.
+- Remote plugins run as co-processes, safely and asynchronously.
+- GUIs, IDEs, web browsers can --embed Neovim as an editor or script host.
+- Lua plugins are easy to create just like Vimscript plugins. Your config can live in init.lua!
+- AST-producing parsing engine enables faster, more accurate syntax highlighting, code navigation, refactoring, text objects, and motions.
 
 ### Usable
 
-Strong defaults including a unique, minimalist colorscheme.
-Builtin LSP client for semantic code inspection and refactoring (go-to definition, "find references", format, …).
-Client-server architecture allows you to detach the UI and keep the editor session running (like tmux). Attach multiple UIs to any Nvim session.
-Works the same everywhere: one build-type, one command.
-Modern terminal features such as cursor styling, focus events, bracketed paste.
-Builtin :terminal set the standard for "TTY as a basic component".
+- Strong defaults including a unique, minimalist colorscheme.
+- Builtin LSP client for semantic code inspection and refactoring (go-to definition, "find references", format, ...).
+- Client-server architecture allows you to detach the UI and keep the editor session running (like tmux). Attach multiple UIs to any Nvim session.
+- Works the same everywhere: one build-type, one command.
+- Modern terminal features such as cursor styling, focus events, bracketed paste.
+- Builtin `:terminal` set the standard for "TTY as a basic component".
 
 ### Drop-in Vim
 
-Fully compatible with Vim's editing model and Vimscript v1.
-Start with :help nvim-from-vim if you already use Vim. If not, try :Tutor.
+- Fully compatible with Vim's editing model and Vimscript v1.
+- Start with :help nvim-from-vim if you already use Vim. If not, try :Tutor.
 
-### Following HEAD
+## Following HEAD
+
 - If you want to stay up to date with the latest development you can install neovim using the `--pre` option.
 - For example: `choco install neovim --pre`. 
 - Which will get you the latest _nightly_ builds for windows.
 
-### Package Parametes
+## Package Parametes
+
 - `/NoNeovimOnPath`: Neovim binary folder will not be added to the path.
     - Optional parameter.
     - Default behavior is that Neovim binary will be added to the users path.
