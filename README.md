@@ -8,8 +8,8 @@ Chocolatey package for the distribution of released versions of [neovim](https:/
 - [ ] nuspec: update `release notes` tag.
 - [ ] chocolateyinstall.ps1: update `$url` and `$url64`
 - [ ] chocolateyinstall.ps1: update the `checksum` and `checksum64`
-	- `"c:\ProgramData\chocolatey\tools\checksum.exe" nvim-win32.zip -t=sha256`
-	- The checksum `-t` depends on what you have specified in your `checksumType`
+  - `"c:\ProgramData\chocolatey\tools\checksum.exe" nvim-win32.zip -t=sha256`
+  - The checksum `-t` depends on what you have specified in your `checksumType`
 
 ## Installation Instructions
 
@@ -24,7 +24,7 @@ Chocolatey package for the distribution of released versions of [neovim](https:/
 - Instructions to setup the container, where `choco-neovim` is this repo.
 
 ```sh
-sudo docker pull chocolatey/choco   
+sudo docker pull chocolatey/choco
 sudo docker run -ti --rm -v $PWD/choco-neovim:/data chocolatey/choco:latest /bin/bash
 ```
 - Always pack after making any changes

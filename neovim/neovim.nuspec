@@ -2,66 +2,78 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>neovim</id>
-		<title>Neovim</title>
-    <version>0.11.0</version>
-		<packageSourceUrl>https://github.com/tricktux/choco-neovim</packageSourceUrl>
-		<owners>Reinaldo Molina</owners>
-		<authors>Neovim contributors</authors>
+        <title>Neovim</title>
+    <version>0.11.1</version>
+        <packageSourceUrl>https://github.com/tricktux/choco-neovim</packageSourceUrl>
+        <owners>Reinaldo Molina</owners>
+        <authors>Neovim contributors</authors>
     <projectUrl>https://neovim.io/</projectUrl>
-		<iconUrl>https://cdn.statically.io/gh/neovim/neovim/68e2d722/cmake.packaging/neovim.png</iconUrl>
-		<copyright>Copyright Neovim contributors. All rights reserved.</copyright>
+        <iconUrl>https://cdn.statically.io/gh/neovim/neovim/68e2d722/cmake.packaging/neovim.png</iconUrl>
+        <copyright>Copyright Neovim contributors. All rights reserved.</copyright>
     <licenseUrl>https://raw.githubusercontent.com/neovim/neovim/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<projectSourceUrl>https://github.com/neovim/neovim</projectSourceUrl>
-		<docsUrl>https://neovim.io/doc/general/</docsUrl>
+        <projectSourceUrl>https://github.com/neovim/neovim</projectSourceUrl>
+        <docsUrl>https://neovim.io/doc/general/</docsUrl>
     <wikiUrl>https://github.com/neovim/neovim/wiki/</wikiUrl>
-		<mailingListUrl>https://neovim.discourse.group/</mailingListUrl>
-		<bugTrackerUrl>https://github.com/neovim/neovim/issues</bugTrackerUrl>
-		<tags>vi vim gvim neovim text editor sublime atom emacs notepad</tags>
-		<summary>Vim-fork focused on extensibility and usability.</summary>
-		<description>
-### More powerful plugins
-- The msgpack API enables structured communication to and from any programming language.
-- Remote plugins run as co-processes that communicate with Neovim safely and asynchronously.
+        <mailingListUrl>https://neovim.discourse.group/</mailingListUrl>
+        <bugTrackerUrl>https://github.com/neovim/neovim/issues</bugTrackerUrl>
+        <tags>vi vim gvim neovim text editor sublime atom emacs notepad</tags>
+        <summary>Vim-fork focused on extensibility and usability.</summary>
+        <description>
+## Features
 
-### Better out-of-the-box
-- Strong defaults
-- Modern terminal features such as truecolor and bracketed paste
-- Built-in terminal emulator
-- First-class embedding
-- GUIs (or TUIs—such as readline) can nvim --embed or communicate via TCP socket using the discoverable msgpack API.
+### Extensible
 
-### Drop-in replacement for Vim
-- Neovim is an extension of Vim: feature-parity and backwards compatibility are high priorities.
-- If you are already familiar with Vim, see :help nvim-from-vim to learn about the differences.
+- API is first-class: discoverable, versioned, documented.
+- MessagePack structured communication enables extensions in any language.
+- Remote plugins run as co-processes, safely and asynchronously.
+- GUIs, IDEs, web browsers can --embed Neovim as an editor or script host.
+- Lua plugins are easy to create just like Vimscript plugins. Your config can live in init.lua!
+- AST-producing parsing engine enables faster, more accurate syntax highlighting, code navigation, refactoring, text objects, and motions.
 
-### Following HEAD
+### Usable
+
+- Strong defaults including a unique, minimalist colorscheme.
+- Builtin LSP client for semantic code inspection and refactoring (go-to definition, "find references", format, ...).
+- Client-server architecture allows you to detach the UI and keep the editor session running (like tmux). Attach multiple UIs to any Nvim session.
+- Works the same everywhere: one build-type, one command.
+- Modern terminal features such as cursor styling, focus events, bracketed paste.
+- Builtin `:terminal` set the standard for "TTY as a basic component".
+
+### Drop-in Vim
+
+- Fully compatible with Vim's editing model and Vimscript v1.
+- Start with :help nvim-from-vim if you already use Vim. If not, try :Tutor.
+
+## Following HEAD
+
 - If you want to stay up to date with the latest development you can install neovim using the `--pre` option.
 - For example: `choco install neovim --pre`. 
 - Which will get you the latest _nightly_ builds for windows.
 
-### Package Parametes
+## Package Parametes
+
 - `/NoNeovimOnPath`: Neovim binary folder will not be added to the path.
-	- Optional parameter.
-	- Default behavior is that Neovim binary will be added to the users path.
-	- If this is used together with `/NeovimOnPathForAll`, this takes precedence and the path will not be modified.
-	- Example: `choco install neovim --params "/NoNeovimOnPath"`
+    - Optional parameter.
+    - Default behavior is that Neovim binary will be added to the users path.
+    - If this is used together with `/NeovimOnPathForAll`, this takes precedence and the path will not be modified.
+    - Example: `choco install neovim --params "/NoNeovimOnPath"`
 - `/NeovimOnPathForAll`: Neovim binary folder will be added to the machine path.
-	- Optional parameter.
-	- Default behavior is that Neovim binary will be added only to the users path.
-	- Example: `choco install neovim --params "/NeovimOnPathForAll"`
+    - Optional parameter.
+    - Default behavior is that Neovim binary will be added only to the users path.
+    - Example: `choco install neovim --params "/NeovimOnPathForAll"`
 
 **Note:** ~~To force the installation of x32 version, use the `--x86` argument with `choco install`.~~
 
 As of [#16317](https://github.com/neovim/neovim/pull/16317) Win32 builds and releases were removed
 
-		</description>
-		<releaseNotes>
-Release notes [here](https://github.com/neovim/neovim/releases/tag/v0.11.0).
-		</releaseNotes>
-		<dependencies>
-			<dependency id="vcredist2015" version="14.0.24215.20170201"/>
-		</dependencies>
+        </description>
+        <releaseNotes>
+Release notes [here](https://github.com/neovim/neovim/releases/tag/v0.11.1).
+        </releaseNotes>
+        <dependencies>
+            <dependency id="vcredist2015" version="14.0.24215.20170201"/>
+        </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
