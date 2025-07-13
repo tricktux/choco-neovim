@@ -5,7 +5,7 @@ $ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName = 'neovim' # arbitrary name for the package, used in messages
 $destDir     = Join-Path $(Get-ToolsLocation) $packageName
-$url64       = 'https://github.com/neovim/neovim/releases/download/v0.11.2/nvim-win64.zip' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
+$url64       = 'https://github.com/neovim/neovim/releases/download/v0.11.3/nvim-win64.zip' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
 $bin         = $destDir + '\nvim-win64\bin'
 
 # Get user provided paramaters
@@ -17,7 +17,7 @@ $packageArgs = @{
     unzipLocation = $destDir
     url64bit      = $url64
     softwareName  = 'neovim*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
-    checksum64    = 'dfa66afc95422b7c4a0f8ae330f30a00dbb8e9848993d7bfde8e2e85be30de13'
+    checksum64    = '7fc50d8d113a4a88e78138db8384629e6ebaa739e6d43adf74b4ed51cb22ee04'
     checksumType64= 'sha256' #default is checksumType
     validExitCodes= @(0) #please insert other valid exit codes here
 }
