@@ -17,7 +17,7 @@ $packageArgs = @{
     unzipLocation = $destDir
     url64bit      = $url64
     softwareName  = 'neovim*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
-    checksum64    = '47ab3b6633281a2587c8b85dbd1da265d3f218f78e6bb76d28eafb4ed45c3471'
+    checksum64    = '77eee5936724b82e45b448e0370abe0911d75fad551c0a25415f4e51719faf34'
     checksumType64= 'sha256' #default is checksumType
     validExitCodes= @(0) #please insert other valid exit codes here
 }
